@@ -4,6 +4,8 @@ output: html_document
 Title: Math StatHW1
 Author: Mbuthia, Ian.
 ---
+Document doesn't compile as-is; -1
+Overall score: 12/18
 
 **Instructions:** The entirety of this assignment must be submitted as an R Markdown file (.Rmd) on your GitHub repository.  Use the .Rmd note handout files and the R Markdown cheat sheet as guidelines.  You are encouraged to save this HW1.Rmd file and fill in the questions with your answers, then submit.  **I should be able to knit your .Rmd file and compile your code myself, so make sure you do some bug checks before submitting!** (I.e., knit the document yourself a couple times and search for errors.)
 
@@ -14,7 +16,7 @@ We will use simulation to find the mean and variance of $Y$, and then verify tha
 **Theoretical section**
 
 1. (3pts) Define the pmf, find $\mu = E(Y)$, $\sigma^2 = Var(Y)$, and $\sigma = SD(Y)$.  Show all your work.
-
+y should be 1:6; it's the max of two rolls.  -2
 y <- (2:12)
 py <- c(1/36, 2/36, 3/36, 4/36, 5/36, 6/36, 5/36, 4/36, 3/36, 2/36, 1/36)
 y*py
@@ -41,7 +43,7 @@ ggplot(aes(x=y,y=probs),data=dd) + geom_bar(stat='identity') +
   $Var(Z) = Var(2Y + 1) = 1^2*Var(Y)$
   $=1*5.833333$
   $=5.833333$
-  
+  Should be 2^2*Var(Y); -1
   
 **Simulation section**  
 
@@ -78,7 +80,7 @@ ggplot(aes(x=as.factor(many.Y)),data=df) + geom_bar(aes(y=(..count..)/(sum(..cou
 9. (1pt)  Create a new object called `many.Z` that creates 1000 realizations of $Z$.
 many.Z <- replicate(1000,one.Y())
     View(many.Z)
-
+Z is not just more Y; it's 2*Y + 1.  -1
 10. (1pt)  What is the mean of $Z$?
   mean(many.Z)
    
@@ -87,7 +89,7 @@ many.Z <- replicate(1000,one.Y())
   
 12. (1pt) Note that your simulated results should be similar to the theoretical quantities; if they aren't, re-check your R code!  What is the reason for any differences?
   
-
+???  -1
 
 
 
